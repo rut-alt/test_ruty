@@ -1,23 +1,29 @@
 import streamlit as st
+import base64
 
 # ---------- CONFIGURACIÓN INICIAL ----------
 st.set_page_config(page_title="¿Cuánto me conoces?", layout="centered")
 
-# ---------- FONDO PERSONALIZADO ----------
+# ---------- FONDO CON BASE64 ----------
 def set_background(image_path):
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background: url("{image_path}") no-repeat center center fixed;
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    with open(image_path, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read()).decode()
+        st.markdown(
+            f"""
+            <style>
+            .stApp {{
+                background-image: url("data:image/jpg;base64,{encoded_string}");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
 
-# Usa el nombre exacto del archivo:
+# Nombre de tu imagen (asegúrate que esté en la misma carpeta que este script)
 set_background("fondo-brillante-elegante-con-estilo-borroso.jpg")
 
 # ---------- CONTENIDO ----------
@@ -55,5 +61,6 @@ if submitted:
 
     puntaje_final = round((puntaje / len(preguntas)) * 10, 1)
     st.success(f"¡Terminaste! Tu nota es: **{puntaje_final} / 10**")
+
 
 
