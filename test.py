@@ -42,6 +42,15 @@ st.markdown("<p style='text-align: center; color: white;'>Responde las siguiente
 
 # ---------- PREGUNTAS Y RESPUESTAS ----------
 preguntas = [
+        {
+        "pregunta": "¿Qué significa mi nombre?",
+        "opciones": [
+            "La guardiana de la galaxia",
+            "Compañera fiel",
+            "Estrella del alba"
+        ],
+        "respuesta_correcta": "Compañera fiel"
+    },
     {
         "pregunta": "¿Con qué libro he llorado más?",
         "opciones": [
@@ -56,11 +65,128 @@ preguntas = [
         "opciones": [
             "Max",
             "Maximilian",
-            "Maximo Decimo Meridio",
+            "Máximo Décimo Meridio",
             "Todas son correctas"
         ],
         "respuesta_correcta": "Todas son correctas"
-    }
+    },
+    {
+        "pregunta": "¿Cuál es mi color favorito?",
+        "opciones": [
+            "El rosita",
+            "El plateado",
+            "El negro"
+        ],
+        "respuesta_correcta": "El plateado"
+    },
+    {
+        "pregunta": "¿Qué objeto no falta nunca en mi bolso?",
+        "opciones": [
+            "Las llaves",
+            "Un libro",
+            "Pañuelos"
+        ],
+        "respuesta_correcta": "Un libro"
+    },
+    {
+        "pregunta": "¿Tú qué opinas?",
+        "opciones": [
+            "Prefiero no opinar",
+            "Llámame y te cuento",
+            "Yo copazas"
+        ],
+        "respuesta_correcta": "Yo copazas"
+    },
+        {
+        "pregunta": "¿Cómo me llama mi hermana pequeña?",
+        "opciones": [
+            "Tata",
+            "Sis",
+            "Rata"
+        ],
+        "respuesta_correcta": "Rata"
+    },
+    {
+        "pregunta": "¿Cuál es mi mayor fobia?",
+        "opciones": [
+            "Aracnofobia",
+            "Tripofobia",
+            "Fobia social"
+        ],
+        "respuesta_correcta": "Tripofobia"
+    },
+    {
+        "pregunta": "¿Qué es lo primero que haría si ganase la lotería?",
+        "opciones": [
+            "Un viaje todo incluido con mis amigas",
+            "Comprarme un GTI",
+            "Ponerme un piso en la playa"
+        ],
+        "respuesta_correcta": "Un viaje todo incluido con mis amigas"
+    },
+        {
+        "pregunta": "¿Te puedo cantar una canción?",
+        "opciones": [
+            "Teeeeee quiero mucho...",
+            "Vale",
+            "No me gusta cantar"
+        ],
+        "respuesta_correcta": "Teeeeee quiero mucho..."
+    },
+        {
+        "pregunta": "¿Qué bebo cuando salgo?",
+        "opciones": [
+            "Ron con sprite",
+            "y pone opciones... lo que te pongan!",
+            "Ginebra con limón"
+        ],
+        "respuesta_correcta": "y pone opciones... lo que te pongan!"
+    },
+        {
+        "pregunta": "¿Quienes son los guardianes de la galaxia?",
+        "opciones": [
+            "Personajes que te encantan de Marvel",
+            "Tu serie favorita",
+            "La policía nacional"
+        ],
+        "respuesta_correcta": "La policía nacional"
+    },
+    {
+        "pregunta": "¿Cuál fue el viaje de mi vida?",
+        "opciones": [
+            "Georgia",
+            "Campo Solare",
+            "Letonia"
+        ],
+        "respuesta_correcta": "Campo Solare"
+    },
+            {
+        "pregunta": "¿Qué es lo que más me gusta en un chico?",
+        "opciones": [
+            "Las manos cuidadas",
+            "La nariz grande",
+            "Los ojos claros"
+        ],
+        "respuesta_correcta": "La nariz grande"
+    },
+                {
+        "pregunta": "¿Qué me gustaría que dijeran de mí cuando no estoy?",
+        "opciones": [
+            "Que soy buena persona",
+            "Que soy extremadamente guapa",
+            "Que soy súper humilde"
+        ],
+        "respuesta_correcta": "Que soy buena persona"
+    },
+                {
+        "pregunta": "¿Si tuviese que asegurarme de alguna respuesta de mi propio test, ¿a quién preguntaría?",
+        "opciones": [
+            "A Julia, Lori y Martillo",
+            "A mi madre",
+            "A la policía nacional"
+        ],
+        "respuesta_correcta": "A Julia, Lori y Martillo"
+    },
 ]
 
 respuestas_usuario = []
