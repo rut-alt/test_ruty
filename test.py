@@ -112,6 +112,11 @@ preguntas = [
         "opciones": ["Las manos cuidadas", "La nariz grande", "Los ojos claros"],
         "respuesta_correcta": "La nariz grande"
     },
+        {
+        "pregunta": "¿Cuál es mi plan de cita perfecto",
+        "opciones": ["Que me lleven a comer y beber hasta explotar", "Ir al cine de la mano", "Netflix y relax en casita"],
+        "respuesta_correcta": "Que me lleven a comer y beber hasta explotar"
+    },
     {
         "pregunta": "¿Qué me gustaría que dijeran de mí cuando no estoy?",
         "opciones": ["Que soy buena persona", "Que soy extremadamente guapa", "Que soy súper humilde"],
