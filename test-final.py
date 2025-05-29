@@ -25,6 +25,19 @@ def set_background(image_path):
                 margin-bottom: 20px;
                 color: white;
             }}
+            .answer-feedback {{
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                color: black;
+            }}
+            .correct {{
+                border-left: 5px solid green;
+            }}
+            .incorrect {{
+                border-left: 5px solid red;
+            }}
             .stRadio > label {{
                 color: white !important;
             }}
@@ -36,12 +49,13 @@ def set_background(image_path):
 # Fondo
 set_background("fondo-brillante-elegante-con-estilo-borroso.jpg")
 
-# ---------- CONTENIDO ----------
+# ---------- TÍTULOS ----------
 st.markdown("<h1 style='text-align: center; color: white;'>¿Cuánto me conoces?</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: white;'>Responde las siguientes preguntas. ¡Vamos a ver cuánto me conoces chulit@!</p>", unsafe_allow_html=True)
 
-# ---------- PREGUNTAS Y RESPUESTAS ----------
+# ---------- PREGUNTAS ----------
 preguntas = [
+    # Tus 20 preguntas aquí (las copio tal cual las pasaste) ...
     {
         "pregunta": "¿Qué significa mi nombre?",
         "opciones": ["La guardiana de la galaxia", "Compañera fiel", "Estrella del alba"],
@@ -112,7 +126,7 @@ preguntas = [
         "opciones": ["Las manos cuidadas", "La nariz grande", "Los ojos claros"],
         "respuesta_correcta": "La nariz grande"
     },
-        {
+    {
         "pregunta": "¿Cuál es mi plan de cita perfecto",
         "opciones": ["Que me lleven a comer y beber hasta explotar", "Ir al cine de la mano", "Netflix y relax en casita"],
         "respuesta_correcta": "Que me lleven a comer y beber hasta explotar"
@@ -178,9 +192,30 @@ if submitted:
         st.success(f"¡Terminaste! Tu nota es: **{puntaje_final} / 10**")
         st.markdown(f"<h3 style='color: white; text-align: center;'>{mensaje}</h3>", unsafe_allow_html=True)
 
+        # Feedback por pregunta
+        st.markdown("---")
+        st.subheader("📋 Revisión de tus respuestas:")
+
+        for idx, item in enumerate(preguntas):
+            correcta = item["respuesta_correcta"]
+            elegida = respuestas_usuario[idx]
+            clase = "correct" if elegida == correcta else "incorrect"
+            icono = "✅" if elegida == correcta else "❌"
+            st.markdown(
+                f"""
+                <div class="answer-feedback {clase}">
+                    <b>{idx+1}. {item['pregunta']}</b><br>
+                    {icono} Tu respuesta: <i>{elegida}</i><br>
+                    ✅ Correcta: <i>{correcta}</i>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
         # Botón para reiniciar
         if st.button("🔁 Volver a intentarlo"):
             st.experimental_rerun()
+
 
 
 
