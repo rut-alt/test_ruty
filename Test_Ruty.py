@@ -9,7 +9,7 @@ def set_background_from_file(image_path):
         f"""
         <style>
         .stApp {{
-            background-image: url("{image_path}");
+            background-image: url("{cerca-brillo-brillante_23-2149140052.jpg}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
